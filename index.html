@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/league.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +16,101 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>L'UX accessible : Exploitez le potentiel des attributs ARIA</section>
+				<section>
+					<p>User Experience (UX)</p>
+					<p>Accessibilité</p>
+					<aside class="notes">
+						<p>Pourquoi parler d'accessbilité et d'expérience utilisateur ?</p>
+						<p> parce qu'à l'heure où de nombreux projets qui commencent à adresser aujourd'hui l'accessibilité, cela passe bien souvent par la seule rédolution technique, si ce n'est par une responsabilité très forte des développeurs.</p>
+						<p>Cela ne veut bien spur pas dire que les développeurs sont à négliger mais ce sont trop souvent les premiers acteurs: on ne cherche pas à rendre accessible, on essaye de corriger les erreurs d'accessibilité</p>
+
+						<p>Mais nos produits numériques sont purtant bien le patient zéro d'un expérience utilisateur née d'une vision très limitée de ces utilisateurs finaux</p>
+
+						<p>Et pour cela, nul besoin d'aller en chercher la raison très loin</p>
+				</section>
+				<section>
+					<aside class="notes">
+						<p>En tant que développeur, nous sommes les premiers symptomes de ce problème</p>
+						<p>écran de grande qualité</p>
+						<p>éclairage optimisé</p>
+						<p>connexion internet de qualité</p>
+						<p>si ce n'est àà citer qu'un exemple, il en est celui des New Yorkais: 1?2 million d'utilisateurs quotidiens dans le métro avec une connexion limitée</p>
+					</aside>
+				</section>
+				<section data-auto-animate>
+					<button data-id="ss" style="font-size: 4rem">Save</button>
+					<button style="font-size: 4rem" disabled>Save dd</button>
+					<button data-id="ff" style="font-size: 4rem">Save ff</button>
+					<aside class="notes">
+						<p>ff</p>
+						<p>La problématique </p>
+					</aside>
+				</section>
+				<section data-auto-animate>
+					<button data-id="ss" style="font-size: 4rem">Save</button>
+					<button data-id="ff" style="font-size: 4rem">Save ff</button>
+					<aside class="notes">
+						<p>
+							Mais voici la perception
+						</p>
+					</aside>
+				</section>
+				<section data-auto-animate>
+					<h2>aria-disabled</h2>
+				</section>
+				<section data-auto-animate>
+					<h2>aria-disabled</h2>
+					<button aria-disabled="true" style="font-size: 4rem">Save</button>
+					<aside class="notes">
+						<p>L'objectif d'aria-disabled est de faire véhiculer l'information de la désactivation du bouton</p>
+						<p>le bouton est perceptible mais n'est pas actionable</p>
+					</aside>
+				</section>
+				<section>
+					<aside class="notes">
+						<p>Il faut n"anmoins prendre en compte que le bouton n'est plus désactivé, que ce soit programmatiquement ou visuellement par design</p>
+						<p>il faut donc s'assurer d'intégrer un contrôle côté javascript et une classe spécifique côté css</p>
+					</aside>
+				</section>
+				<section>
+					<aside class="notes">
+						<p>Et donc grâce à cela nous avons maintenant un bouton dont la désactivation est perceptible par tout le monde</p>
+					</aside>
+				</section>
+				<section>
+					<aside class="notes">
+						<p>Quand bien même un élément est perceptible, sa snigifcation peut ne pas l'être, résolu une fois encore à limiter la perception à la perception visuelle</p>
+					</aside>
+				</section>
+				<section>
+					<h2>aria-current</h2>
+					<aside class="notes">
+						<p>Il s'agit de la position d'un curseur sur une liste d'éléments: comment isgnifer lequel est sélectionné</p>
+					</aside>
+				</section>
+				<section>
+					<aside class="notes">
+						<p>Attention à ne pas utiliser aria-current pour des éléments gérant nativement une sélection, comme select</p>
+					</aside>
+				</section>
+				<section>
+					<aside class="notes">
+						Si aria-current permet d'identifier la position d'un curseur, il arrive pendant la navigation d'une page de d
+					</aside>
+				</section>
+				<section>
+					<h2>aria-valuemin</h2>
+					<aside class="notes"></aside>
+				</section>
+				<section>
+					<h2>aria-live</h2>
+					<aside class="notes"></aside>
+				</section>
+				<section>
+					<h2>aria-busy</h2>
+					<aside class="notes"></aside>
+				</section>
 			</div>
 		</div>
 
