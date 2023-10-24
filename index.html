@@ -1,133 +1,325 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/league.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/league.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>L'UX accessible : Exploitez le potentiel des attributs ARIA</section>
-				<section>
-					<p>User Experience (UX)</p>
-					<p>Accessibilité</p>
-					<aside class="notes">
-						<p>Pourquoi parler d'accessbilité et d'expérience utilisateur ?</p>
-						<p> parce qu'à l'heure où de nombreux projets qui commencent à adresser aujourd'hui l'accessibilité, cela passe bien souvent par la seule rédolution technique, si ce n'est par une responsabilité très forte des développeurs.</p>
-						<p>Cela ne veut bien spur pas dire que les développeurs sont à négliger mais ce sont trop souvent les premiers acteurs: on ne cherche pas à rendre accessible, on essaye de corriger les erreurs d'accessibilité</p>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>UX accessible : Exploitez le potentiel des attributs ARIA</h2>
+        </section>
+        <section>
+            <h2>Merci la régie</h2>
+            <aside class="notes">
+                <p>2 minutes</p>
+            </aside>
+        </section>
+        <section>
+            <h2>ACCESSIBILITE</h2>
+            <h2 class="fragment">USER EXPERIENCE (UX)</h2>
+            <aside class="notes">
+                2 minutes
+            </aside>
+        </section>
+        <section>
+            <h2>Rendre perceptible l'invisible</h2>
+            <aside class="notes">
+                1 minute
+            </aside>
+        </section>
+        <section>
+            <h2>HTML</h2>
+            <aside class="notes">
+                1 minute
+            </aside>
+        </section>
+        <section>
+            <h2>aria-attributes</h2>
+            <h2 class="fragment">Ne pas utiliser aria</h2>
+            <aside class="notes">
+                30 secondes
+            </aside>
+        </section>
+        <section>
+            <h2>aria-label</h2>
+            <aside class="notes">
+                1 minute
+            </aside>
+        </section>
+        <section>
+					<pre><code data-trim>
+						<label aria-label="Username">Username</label>
+					</code></pre>
+        </section>
+        <section>
+            <h2>aria-hidden</h2>
+            <aside class="notes">
+                1 minute
+            </aside>
+        </section>
+        <section>
+					<pre><code data-trim>
+						<img src="cat.avif" aria-hidden="true" />
+					</code></pre>
+        </section>
+        <section>
+            <h2>DISABLED</h2>
+            <aside class="notes">
+                3 minutes
+            </aside>
+        </section>
+        <section>
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 1rem">
+                <label style="display: flex; flex-direction: column; align-items: start">
+                    <span style="font-size: 32px">Username</span>
+                    <input style="height: 32px; width: 300px" type="text">
+                </label>
+                <label style="display: flex; flex-direction: column; align-items: start">
+                    <span style="font-size: 32px">Password</span>
+                    <input style="height: 32px; width: 300px" type="password">
+                </label>
+                <button style="font-size: 32px" disabled>Se connecter</button>
+            </div>
+        </section>
+        <section>
+            <h2>aria-disabled</h2>
+            <aside class="notes"></aside>
+        </section>
+        <section>
+					<pre><code data-trim>
+						<button aria-disabled="true">Valider</button>
+					</code></pre>
+        </section>
+        <section>
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 1rem">
+                <label style="display: flex; flex-direction: column; align-items: start">
+                    <span style="font-size: 32px">Username</span>
+                    <input style="height: 32px; width: 300px" type="text">
+                </label>
+                <label style="display: flex; flex-direction: column; align-items: start">
+                    <span style="font-size: 32px">Password</span>
+                    <input style="height: 32px; width: 300px" type="password">
+                </label>
+                <button style="font-size: 32px" aria-disabled="true">Se connecter</button>
+            </div>
+        </section>
+        <section>
+            <h2>aria-current</h2>
+            <aside class="notes"></aside>
+        </section>
+        <section data-auto-animate>
+            <nav>
+                <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; gap: 4rem;">
+                    <li>
+                        <a style="border-bottom: 2px solid" href="" aria-current="page">Mon Compte</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section data-auto-animate>
+            <nav>
+                <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; gap: 4rem;">
+                    <li>
+                        <a href="" aria-current="page">Accueil</a>
+                    </li>
+                    <li>
+                        <a style="border-bottom: 2px solid" href="" aria-current="page">Mon Compte</a>
+                    </li>
+                    <li>
+                        <a href="" aria-current="page">Mes factures</a>
+                    </li>
+                </ul>
+            </nav>
+            <aside class="notes">
+                <p>Attention l'objectif est de passer l'information de l'élement en cours, pas de l'élement sélectionné
+                    (aria-selected)</p>
+            </aside>
+        </section>
+        <section>
+            <pre><code data-trim data-line-numbers="1-10|7">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="" aria-current="page">Mon Compte</a>
+                        </li>
+                    </ul>
+                </nav>
+            </code></pre>
+        </section>
+        <section>
+            <pre><code data-trim data-line-numbers="1-10|1">
+                <nav aria-label="Navigation principale">
+                    <ul>
+                        <li>
+                            <a href="">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="" aria-current="page">Mon Compte</a>
+                        </li>
+                    </ul>
+                </nav>
+            </code></pre>
+        </section>
+        <section>
+            <ul>
+                <li>page</li>
+                <li class="fragment">step</li>
+                <li class="fragment">location</li>
+                <li class="fragment">date</li>
+                <li class="fragment">time</li>
+                <li class="fragment">true</li>
+                <li class="fragment">false</li>
+            </ul>
+        </section>
+        <section>
+            <h2>PROGRESSION</h2>
+            <aside class="notes"></aside>
+        </section>
+        <section>
+            <pre><code data-trim>
+                <div aria-valuemin="0" aria-valuemax="100" aria-valuenow="10">
+                    <!-- custom progress bar -->
+                </div>
+            </code></pre>
+        </section>
+        <section>
+            <pre><code data-trim data-line-numbers="1">
+                <div aria-valuetext="Starting" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <!-- custom progress bar -->
+                </div>
+            </code></pre>
+        </section>
+        <section>
+            <div style="color: black; border-radius: 8px; background: lightgray; display: inline-block; padding: 1rem; font-weight: bold">Ceci est une alerte</div>
+        </section>
+        <section>
+            <pre><code data-trim>
+                <div role="alert">Ceci est une alerte</div>
+            </code></pre>
+        </section>
+        <section>
+            <h2>aria-live</h2>
+        </section>
+        <section>
+            <pre><code data-trim data-line-numbers="1-3">
+                <div class="container" aria-live="polite">
+                    <p>Ceci est une alerte</p>
+                </div>
+            </code></pre>
 
-						<p>Mais nos produits numériques sont purtant bien le patient zéro d'un expérience utilisateur née d'une vision très limitée de ces utilisateurs finaux</p>
+            <pre class="fragment"><code data-trim data-line-numbers="1">
+                <div class="container" aria-live="assertive">
+                    <p>Ceci est une alerte</p>
+                </div>
+            </code></pre>
+        </section>
+        <section>
+            <ul>
+                <li>aria-atomic</li>
+                <li class="fragment">aria-relevant</li>
+            </ul>
+        </section>
+        <section>
+            <div style="font-size: 120px">Chargement ...</div>
+            <div class="fragment" style="font-size: 120px">Chargement ...</div>
+        </section>
+        <section>
+            <h2>aria-busy</h2>
+            <aside class="notes"></aside>
+        </section>
+        <section>
+            <pre><code data-trim data-line-numbers="1-4">
+                <div aria-busy="true">
+                    Chargement en cours...
+                    Chargement en cours...
+                </div>
+            </code></pre>
+        </section>
+        <section>
+            <pre><code data-trim>
+                <div aria-busy="false">
+                    <!-- affichage du contenu> -->
+                </div>
+            </code></pre>
+        </section>
+        <section>
+            <pre><code data-trim>
+                <div aria-live="polite" aria-busy="false">
+                    <!-- affichage du contenu> -->
+                </div>
+            </code></pre>
+        </section>
+        <section>
+            <h2>aria-controls</h2>
+        </section>
+        <section>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <button style="border: none; font-size: 60px; margin-bottom: 16px" aria-controls="menu">Menu</button>
+                <ul style="list-style-type: none; padding: 0; margin: 0" id="menu">
+                    <li style="margin: 0; padding: 0; height: 70px">
+                        <button style="border: none; font-size: 60px; height: 70px" aria-controls="menu">Item 1</button>
+                    </li>
+                    <li style="margin: 0; padding: 0; height: 70px">
+                        <button style="border: none; font-size: 60px; height: 70px" aria-controls="menu">Item 2</button>
+                    </li>
+                    <li style="margin: 0; padding: 0; height: 70px">
+                        <button style="border: none; font-size: 60px; height: 70px" aria-controls="menu">Item 3</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <pre><code data-trim data-line-numbers="1-6|1|2">
+                <button aria-controls="menu">Menu</button>
+                <ul id="menu">
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+            </code></pre>
+        </section>
+        <section>
+            <div style="display: flex; justify-content: space-between; gap: 4rem; align-items: center">
+                <div>
+                    <img src="/avatar.jpeg" width="auto" height="400px" alt="">
+                    <p>Gérôme GRIGNON</p>
+                </div>
+                <h2>merci la régie</h2>
+            </div>
 
-						<p>Et pour cela, nul besoin d'aller en chercher la raison très loin</p>
-				</section>
-				<section>
-					<aside class="notes">
-						<p>En tant que développeur, nous sommes les premiers symptomes de ce problème</p>
-						<p>écran de grande qualité</p>
-						<p>éclairage optimisé</p>
-						<p>connexion internet de qualité</p>
-						<p>si ce n'est àà citer qu'un exemple, il en est celui des New Yorkais: 1?2 million d'utilisateurs quotidiens dans le métro avec une connexion limitée</p>
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<button data-id="ss" style="font-size: 4rem">Save</button>
-					<button style="font-size: 4rem" disabled>Save dd</button>
-					<button data-id="ff" style="font-size: 4rem">Save ff</button>
-					<aside class="notes">
-						<p>ff</p>
-						<p>La problématique </p>
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<button data-id="ss" style="font-size: 4rem">Save</button>
-					<button data-id="ff" style="font-size: 4rem">Save ff</button>
-					<aside class="notes">
-						<p>
-							Mais voici la perception
-						</p>
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<h2>aria-disabled</h2>
-				</section>
-				<section data-auto-animate>
-					<h2>aria-disabled</h2>
-					<button aria-disabled="true" style="font-size: 4rem">Save</button>
-					<aside class="notes">
-						<p>L'objectif d'aria-disabled est de faire véhiculer l'information de la désactivation du bouton</p>
-						<p>le bouton est perceptible mais n'est pas actionable</p>
-					</aside>
-				</section>
-				<section>
-					<aside class="notes">
-						<p>Il faut n"anmoins prendre en compte que le bouton n'est plus désactivé, que ce soit programmatiquement ou visuellement par design</p>
-						<p>il faut donc s'assurer d'intégrer un contrôle côté javascript et une classe spécifique côté css</p>
-					</aside>
-				</section>
-				<section>
-					<aside class="notes">
-						<p>Et donc grâce à cela nous avons maintenant un bouton dont la désactivation est perceptible par tout le monde</p>
-					</aside>
-				</section>
-				<section>
-					<aside class="notes">
-						<p>Quand bien même un élément est perceptible, sa snigifcation peut ne pas l'être, résolu une fois encore à limiter la perception à la perception visuelle</p>
-					</aside>
-				</section>
-				<section>
-					<h2>aria-current</h2>
-					<aside class="notes">
-						<p>Il s'agit de la position d'un curseur sur une liste d'éléments: comment isgnifer lequel est sélectionné</p>
-					</aside>
-				</section>
-				<section>
-					<aside class="notes">
-						<p>Attention à ne pas utiliser aria-current pour des éléments gérant nativement une sélection, comme select</p>
-					</aside>
-				</section>
-				<section>
-					<aside class="notes">
-						Si aria-current permet d'identifier la position d'un curseur, il arrive pendant la navigation d'une page de d
-					</aside>
-				</section>
-				<section>
-					<h2>aria-valuemin</h2>
-					<aside class="notes"></aside>
-				</section>
-				<section>
-					<h2>aria-live</h2>
-					<aside class="notes"></aside>
-				</section>
-				<section>
-					<h2>aria-busy</h2>
-					<aside class="notes"></aside>
-				</section>
-			</div>
-		</div>
+        </section>
+    </div>
+</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+        progress: false,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
 </html>
