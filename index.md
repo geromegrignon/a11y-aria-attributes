@@ -1,5 +1,8 @@
 # L'UX accessible : Exploitez le potentiel des attributs ARIA
 
+Nous avons la capacité de modeler une interface mais nous oublins bien vite notre responsabilité de modeler l'expérience utilisateur.
+
+
 Si associer UX et Accessibilité peut sembler non seulement naturel mais indissociable pour certains, cette évidence ne l'est pas pour tous.
 Elle ne l'est pas pour tous dans le contexte actuel où, si l'accessibilité n'en est pas une nouveauté, elle en devient une obligation légale.
 
@@ -63,6 +66,12 @@ Laissez vous bercer par la découverte de ces attributs
 // labyrinthe de pan créature yeux mains
 
 Ok ça c'était pour vous réveiller.
+
+<p>En tant que développeur, nous sommes les premiers symptomes de ce problème</p>
+						<p>écran de grande qualité</p>
+						<p>éclairage optimisé</p>
+						<p>connexion internet de qualité</p>
+						<p>si ce n'est àà citer qu'un exemple, il en est celui des New Yorkais: 1?2 million d'utilisateurs quotidiens dans le métro avec une connexion limitée</p>
 
 
 On peut corriger certains éléments facilement en prenant le temps d'en vocaliser l'intention.
@@ -202,6 +211,10 @@ Mais que faire pour signifier qu'une exécution est en cours et qu'un contenu es
 aria-live: The aria-live is related to aria-busy because they both notify assistive technology that a particular element is being changed or done updating before notifying its user. The aria-live command defines the type of updates to assistive technologies and what their users should expect from the live region.
 aria-relevant: The aria-relevant is related to aria-busy because they both send information to their users and there have been modifications with a certain element. The aria-relevant indicates what user agent notice will be triggered when a live region’s accessibility tree is updated.
 aria-atomic: The aria-atomic is related to aria-busy because they both signify an element is being changed, and assistive technology may prefer to wait before notifying the user. The aria-atomic determines whether assistive technologies will provide all or part of a modified region based on the aria-relevant characteristic.
+
+
+## aria-controls
+
 
 ## Conclusion
 
